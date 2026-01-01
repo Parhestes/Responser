@@ -24,7 +24,6 @@ Responser is not limited to a static list. It is a flexible monitoring platform 
 * **Optimized Data Table:** View findings organized by **ID, Status, Method, Keyword, Path, Length, and Source Tool.**
 * **Integrated Message Viewers:** Click on any finding to instantly inspect the original **Request** and **Response** in the built-in editor.
 * **Read-Only Data Integrity:** The findings table is protected against accidental edits to ensure data consistency.
-* **Professional UI:** A clean, English interface designed for high-efficiency workflows.
 
 ## 📦 Installation
 1.  Download the `Responser.py` file from this repository.
