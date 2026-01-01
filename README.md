@@ -1,32 +1,46 @@
-# Responser - Burp Suite Extension
+Responser - Advanced HTTP Response Monitor for Burp Suite
+Responser is a lightweight yet powerful Burp Suite extension written in Python (Jython) designed to monitor HTTP traffic in real-time. It automatically flags specific keywords, JSON fragments, or sensitive patterns within HTTP responses, helping security researchers and bug hunters stay focused on what matters.
 
-**Responser** is a lightweight Burp Suite extension written in Python (Jython) that monitors HTTP traffic in real-time to detect specific keywords within HTTP responses. It is designed to help security researchers and bug hunters identify sensitive data, role-based access control (RBAC) issues, or interesting debug information.
+🚀 Why Responser?
+During a security audit or bug bounty hunt, thousands of requests pass through Burp Suite. Responser helps you cut through the noise by instantly flagging interesting data based on your custom criteria. It is particularly useful for detecting privilege escalation clues, hidden debug information, and sensitive data leaks that are often missed in manual reviews.
 
-## Features
-- **Real-time Monitoring:** Automatically scans responses from Proxy, Repeater, and Intruder.
-- **Customizable Keywords:** Easily add/remove keywords via the UI.
-- **Active/Passive Control:** Toggle specific keywords using checkboxes without deleting them.
-- **Detailed Table:** View findings with ID, Status, Method, Path, and Response Length.
-- **Integrated View:** Click on any finding to see the original Request and Response.
+🛠 Customizable Monitoring & Search Techniques
+Responser is not limited to a static list. It is a flexible monitoring platform that you can adapt for various testing scenarios:
 
-## Default Keywords
-The tool comes pre-loaded with common sensitive patterns:
-- `"isAdmin": true/false`
-- `"role": "user/admin"`
-- `"success": false`
-- `"authenticated": false`
-- And more...
+Auth & Privilege Escalation: Detect authorization issues by monitoring for keywords like "isAdmin": false, "role": "user", or "authenticated": true.
 
-## Installation
-1. Download `Responser.py`.
-2. Open Burp Suite.
-3. Go to **Extensions** -> **Installed** -> **Add**.
-4. Select **Extension Type** as `Python`.
-5. Select `Responser.py` as the extension file.
-*Note: You must have [Jython](https://www.jython.org/download) configured in Burp Suite.*
+Sensitive Data Leakage: Track PII (Personally Identifiable Information) patterns such as "email":, "phone":, or api_key.
 
-## Screenshots
-[Add your screenshots here to show the UI]
+Error & Debug Hunting: Catch server-side misconfigurations by searching for stacktrace, SQL syntax error, Internal Server Error, or debug: true.
 
-## License
-MIT License - Feel free to use and contribute!
+JSON Logic Monitoring: Search for specific logic fragments like {"status": 200} or "success": false to verify application behavior across different roles.
+
+✨ Key Features
+Real-time Monitoring: Seamlessly hooks into Proxy, Repeater, and Intruder.
+
+Dynamic Keyword Management: Enable or disable specific keywords on-the-fly using Checkboxes without deleting them.
+
+Optimized Data Table: View findings organized by ID, Status, Method, Keyword, Path, Length, and Source Tool.
+
+Integrated Message Viewers: Click on any finding to instantly inspect the original Request and Response in the built-in editor.
+
+Read-Only Data Integrity: The findings table is protected against accidental edits to ensure data consistency.
+
+Professional UI: A clean, English interface designed for high-efficiency workflows.
+
+📦 Installation
+Download the Responser.py file from this repository.
+
+Ensure you have Jython configured in your Burp Suite (Extensions -> Options -> Python Environment).
+
+Go to the Extensions tab -> Installed -> Add.
+
+Set Extension Type to Python.
+
+Select Responser.py as the file and click Next.
+
+💡 Pro Tip
+While testing, if you notice a new interesting parameter or a specific error message, simply add it to the "Keywords" panel. Responser will immediately start flagging it in all subsequent traffic, effectively acting as an automated "second pair of eyes."
+
+📜 License
+This project is licensed under the MIT License - feel free to use, modify, and distribute!
