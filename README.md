@@ -1,9 +1,11 @@
 # Responser - Advanced HTTP Response Monitor for Burp Suite
 
+**Responser** is a lightweight yet powerful Burp Suite extension written in Python (Jython) designed to monitor HTTP traffic in real-time. It automatically flags specific keywords, JSON fragments, or sensitive patterns within HTTP responses, helping security researchers and bug hunters stay focused on what matters.
+
 ## Screenshots
 ![Responser Main UI](screenshots/ui.png)
 
-**Responser** is a lightweight yet powerful Burp Suite extension written in Python (Jython) designed to monitor HTTP traffic in real-time. It automatically flags specific keywords, JSON fragments, or sensitive patterns within HTTP responses, helping security researchers and bug hunters stay focused on what matters.
+
 
 ## 🚀 Why Responser?
 During a security audit or bug bounty hunt, thousands of requests pass through Burp Suite. Responser helps you cut through the noise by instantly flagging interesting data based on your custom criteria. It is particularly useful for detecting privilege escalation clues, hidden debug information, and sensitive data leaks that are often missed in manual reviews.
