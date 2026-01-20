@@ -42,7 +42,7 @@ class BurpExtender(IBurpExtender, IHttpListener, ITab, IMessageEditorController)
             '"success": false', '"authenticated": false', '"isValid": 0',
             '"status": "fail"', '"status": "false"', '"active": false','"active": "false"',
             '"role": "user"', '"role": "default"', '"role": "standart"',
-            '"isAdmin": false', '"isAdmin": "false"', '"privileges":', '"user_type":', '"otp_verified": false', '"otp":"false"
+            '"isAdmin": false', '"isAdmin": "false"', '"privileges":', '"user_type":', '"otp_verified": false', '"IsCompleted":false', '"IsSucceeded":false', "otp":"false"
         ]
         
         self._keyword_objects = [KeywordItem(kw) for kw in default_keywords]
